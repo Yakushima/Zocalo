@@ -1,0 +1,43 @@
+/*C7*/SET SCHEMA PUBLIC
+CONNECT USER SA
+SET AUTOCOMMIT FALSE
+/*C8*/SET SCHEMA PUBLIC
+CONNECT USER SA
+SET AUTOCOMMIT FALSE
+SET AUTOCOMMIT TRUE
+alter table ASKS add column priceMax numeric
+alter table ASKS add column quant numeric
+alter table BEST_ASKS add column priceMax numeric
+alter table BEST_ASKS add column quant numeric
+alter table BEST_BIDS add column priceMax numeric
+alter table BEST_BIDS add column quant numeric
+alter table BIDS add column priceMax numeric
+alter table BIDS add column quant numeric
+alter table BOOK add column BOOK_TYPE varchar(255)
+alter table COUPONBANKS add column minted numeric
+alter table COUPONBANKS add column redeemed numeric
+alter table COUPONS add column quant numeric
+alter table FUNDSS add column quant numeric
+alter table MARKET add column lastTrade timestamp
+alter table MARKET add column maxPriceMax numeric
+alter table ORDERREMOVALS add column priceMax numeric
+alter table ORDERREMOVALS add column quant numeric
+alter table ORDERREMOVALS add column fullfilledQuant numeric
+alter table ORDERREMOVALS add column voidedQuant numeric
+alter table ORDER_TBL add column priceMax numeric
+alter table ORDER_TBL add column quant numeric
+alter table ORDER_TBL add column fullfilled numeric
+alter table ORDER_TBL add column voided numeric
+alter table REDEMPTIONS add column priceMax numeric
+alter table REDEMPTIONS add column quant numeric
+alter table SELFDEALING add column priceMax numeric
+alter table SELFDEALING add column quant numeric
+alter table SORTEDORDERS add column samplePrice numeric
+alter table SORTEDORDERS add column samplePriceMax numeric
+alter table TRADES add column priceMax numeric
+alter table TRADES add column quant numeric
+alter table TRADES add column openingPriceMax numeric
+alter table TRADES add column closingPriceMax numeric
+SET AUTOCOMMIT FALSE
+DISCONNECT
+/*C7*/DISCONNECT
