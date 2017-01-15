@@ -1,6 +1,6 @@
 # Zocalo
 
-From the Sourceforge README:
+From the Sourceforge README (author Chris Hibbert):
 
 This is the April, 2011 release of the Zocalo Prediction Market code.
 
