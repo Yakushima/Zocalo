@@ -2,7 +2,7 @@
 
 From the Sourceforge README:
 
-his is the April, 2011 release of the Zocalo Prediction Market code.
+This is the April, 2011 release of the Zocalo Prediction Market code.
 
 This release is being made available to fix a bug in the RPC server.
 I broke RPC setup when I introduced Quantities and Prices.  
