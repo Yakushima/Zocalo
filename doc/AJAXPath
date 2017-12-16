@@ -1,6 +1,6 @@
 Event objects are created when something significant happens in the server.
 
-Events are instances of subclasses of net.commerce.zocalo.ajax.events.Action, which extends org.apache.log4j.spi.LoggingEvent.  This makes it possible for them to be handed directly to a logger which causes them to be passed as an argument to the Appender's append(Event) method.
+<p>Events are instances of subclasses of net.commerce.zocalo.ajax.events.Action, which extends org.apache.log4j.spi.LoggingEvent.  This makes it possible for them to be handed directly to a logger which causes them to be passed as an argument to the Appender's append(Event) method.<p>
 
 Log4j provides AppenderSkeleton, which is the prototype for Appenders that consume Events.  Zocalo's Appenders format the events and distribute them to dispatchers.  The dispatchers (net.commerce.zocalo.ajax.dispatch.Dispatcher) have a reference to a bayeux channel, and can marshall events and thereby publish them to AJAX.  There's also a MockBayeux and MockBayeuxChannel that allows Zocalo to collect events internally when necessary.
 
