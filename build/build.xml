@@ -465,6 +465,24 @@
         <arg line="TEST" />
      </exec>
   </target>
+	
+	
+	  <target name="HACK" description="Run JUnit Tests Via an Exec Task">
+	     <mkdir dir="${log.dir}" />
+	     <mkdir dir="${test.out}" />
+	     <mkdir dir="${test.web}" />
+	     <exec executable="cmd" >
+	     	<arg value="/c"/>
+	     	<arg value="ant.bat"/>
+	        <env key="CLASSPATH" path="${lib.dir}/junit.jar"/>
+	        <arg line="testTask"/>
+	     </exec>
+	     <exec executable="egrep">
+	        <arg line="-r" />
+	        <arg line="'(Failures: [^0]|Errors: [^0])'" />
+	        <arg line="TEST" />
+	     </exec>
+	  </target>
 
   <target name="schema-export" depends="hibernate-files,classes,testClasses" description="exporting OO-Model to SQL">
      <echo message="Exporting data model to SQL"/>
